@@ -92,11 +92,11 @@
 
       const rows = entries
         .map((entry) => {
-          const name = `<td class="td">${entry.frm_name}</td>`;
-          const email = `<td class="td">${entry.frm_email}</td>`;
-          const password = `<td class="td">${entry.frm_password}</td>`;
-          const dob = `<td class="td">${entry.frm_dob}</td>`;
-          const accept = `<td class="td">${entry.frm_accept}</td>`;
+          const name = `<td class="td">${entry.name}</td>`;
+          const email = `<td class="td">${entry.email}</td>`;
+          const password = `<td class="td">${entry.password}</td>`;
+          const dob = `<td class="td">${entry.dob}</td>`;
+          const accept = `<td class="td">${entry.accept}</td>`;
 
           const row = `<tr>${name} ${email} ${password} ${dob} ${accept}</tr>`;
           return row;
@@ -120,18 +120,18 @@
     const saveUserFrom = (event) => {
       event.preventDefault();
 
-      let frm_name = document.getElementById("name").value;
-      let frm_email = document.getElementById("email").value;
-      let frm_password = document.getElementById("password").value;
-      let frm_dob = document.getElementById("dob").value;
-      let frm_accept = document.getElementById("agree").checked;
+      let name = document.getElementById("name").value;
+      let email = document.getElementById("email").value;
+      let password = document.getElementById("password").value;
+      let dob = document.getElementById("dob").value;
+      let accept = document.getElementById("agree").checked;
 
       let entry = {
-        frm_name,
-        frm_email,
-        frm_password,
-        frm_dob,
-        frm_accept,
+        name,
+        email,
+        password,
+        dob,
+        accept,
       };
 
       Entries.push(entry);
